@@ -1,5 +1,7 @@
 import NavBar from "./NavBar.jsx"
 import SignUp from "./SignUp.JSX"
+import SignIn from "./SignIn.jsx"
+import Home from "./Home.jsx"
 function App() {
 
 
@@ -7,7 +9,7 @@ function App() {
     
       <div>
 <NavBar/>
-<SignUp/>
+<Home/>
 
       </div>
 
