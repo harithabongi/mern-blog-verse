@@ -1,18 +1,27 @@
+import  NavBar from "./NavBar.jsx"
+import {Link} from 'react-router-dom'
+import { CircleUser } from 'lucide-react';
+import { Eye } from 'lucide-react';
+import { EyeOff } from 'lucide-react';
 
 const SignIn = () => {
     return (
-    <div className=" flex justify-center items-center align-middle mt-20  ">
+    <div className=" flex flex-col justify-center items-center align-middle mt-20  ">
+        <NavBar/>
         <div className="flex justify-center flex-col items-center mt-5 gap-3 border-1 border-black w-[30%] h-[700px] bg-blue-50" >
             <h1 className="text-3xl text-center font-bold">sign in</h1>
             <p className="text-gray-600 text-center mt-2">access your account</p>
             <form className=" 'flex flex-col px-2 py-3   justify-center mt-6 w-[80%] " >
                 <div className="flex flex-col  gap-3  mt-1 ">
                     <h1 className="text-xl">Email Address</h1>
-                    <input type="text" placeholder="sample@gmail.com" className="border-1 border-black  py-3 px-6 rounded-2xl w-full" />
+                    <input type="email" placeholder="sample@gmail.com" className="border-1 border-black  py-3 px-6 rounded-2xl w-full" />
                 </div>
                 <div className="flex flex-col gap-3 mt-6 ">
                     <h1 className="text-xl ">Password</h1>
-                    <input type="text" placeholder="sample123" className=" border-1 border-black  py-3 px-6 rounded-2xl w-full" />
+                    <div className="relative">
+                    <input type="password" placeholder="sample123" className=" border-1 border-black  py-3 pl-12 px-6 rounded-2xl w-full" />
+                    <Eye className="top-2 absolute left-2"/>
+                    </div>
                 </div >
                 <div className="flex  justify-around  items-center mt-4">
                     <div className="flex">
@@ -30,7 +39,7 @@ const SignIn = () => {
                 <div className=" border-[0.5px] border-gray-400 w-[90%] mt-8">
                 </div>
                 <div className=" flex items-center justify-center mt-4">
-                    <p className="text-gray-600 font-semibold">Don't have an account? <button className="text-blue-500 hover:text-blue-700">create one here </button></p></div>
+                    <p className="text-gray-600 font-semibold">Don't have an account? <Link to="/signup" className="text-blue-500 hover:text-blue-700">create one here </Link></p></div>
 
 
 
